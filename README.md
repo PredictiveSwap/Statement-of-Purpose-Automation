@@ -1,95 +1,99 @@
-# Statement of Purpose (SOP) Generator
+# AI Statement of Purpose Generator
 
-A web application that generates professional Statements of Purpose (SOPs) using the Llama 3.1 8B model via Ollama.
+A modern, interactive web application that generates professional Statements of Purpose for university applications using AI. Built with Next.js and Ollama for local AI processing.
 
-## Features
+![SOP Generator Preview](https://i.imgur.com/placeholder.png)
 
-- Generates customized SOPs based on user input
-- Uses the powerful Llama 3.1 8B model for high-quality text generation
-- Creates structured SOPs with the following sections:
-  - Introduction
-  - Academic Background
-  - Language Proficiency
-  - Financial Background
-  - Why I Choose this Country for my Studies
-  - Career Opportunities in My Country After Completing the Program
-  - My Family Ties and Return to Home Country
-  - Conclusion
-- Allows downloading the generated SOP as Word document or text file
-- Simple and intuitive user interface
+## 🌟 Features
 
-## Requirements
+- **AI-Powered SOP Generation**: Creates tailored Statements of Purpose based on personal information
+- **Modern User Interface**: Clean, responsive design with animations and intuitive user experience
+- **Real-time Progress Updates**: Detailed progress tracking during SOP generation
+- **Multiple Export Options**: Download as DOCX, PDF, or TXT formats
+- **Copy to Clipboard**: One-click copying of generated content
+- **Offline AI Processing**: Uses Ollama for local AI processing without sending data to external servers
 
-- Python 3.8 or higher
-- Ollama installed on your system (see [Ollama installation instructions](https://ollama.ai/download))
-- Llama 3.1 8B model pulled into Ollama
+## 🚀 Getting Started
 
-## Installation
+### Prerequisites
 
-1. Clone this repository:
-   ```
+- Node.js 18+ and npm
+- [Ollama](https://ollama.ai/) installed and running locally with the LLaMA 3.1 model
+
+### Installation
+
+1. Clone the repository:
+   ```bash
    git clone https://github.com/yourusername/sop-generator.git
-   cd sop-generator
+   cd sop-generator-next
    ```
 
-2. Create a virtual environment (optional but recommended):
-   ```
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. Install the required packages:
-   ```
-   pip install -r requirements.txt
+2. Install dependencies:
+   ```bash
+   npm install
    ```
 
-4. Make sure Ollama is installed and running on your system.
-
-5. Pull the Llama 3.1 8B model into Ollama:
-   ```
-   ollama pull llama3.1:8b
+3. Make sure Ollama is running with the required model:
+   ```bash
+   ollama run llama3.1:8b
    ```
 
-## Usage
-
-1. Start the application:
-   ```
-   python app.py
+4. Start the development server:
+   ```bash
+   npm run dev
    ```
 
-2. Open your browser and navigate to:
-   ```
-   http://localhost:5000
-   ```
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-3. Fill in the form with your personal details.
+## 💻 Usage
 
-4. Click "Generate SOP" and wait for the generation to complete.
+1. Click on "Create Your SOP Now" button on the homepage
+2. Fill in the form with your personal details, including:
+   - Personal information
+   - Academic background
+   - Language proficiency
+   - Financial information
+   - Program details
+   - Career goals
+3. Click "Generate SOP" and wait for the AI to create your Statement of Purpose
+4. Review the generated SOP
+5. Download in your preferred format or copy to clipboard
 
-5. Review the generated SOP and download it in your preferred format.
+## 🛠️ Tech Stack
 
-## Customization
+- **Frontend**: Next.js, TypeScript, Bootstrap 5
+- **Styling**: CSS with custom animations
+- **AI Integration**: Ollama API (local inference)
+- **Document Generation**: DOCX.js for document formatting
 
-You can customize the application by:
+## 📝 API Endpoints
 
-- Modifying the SOP section prompts in `app.py`
-- Adjusting the model parameters like temperature
-- Changing the UI by editing the `templates/index.html` file
+- `/api/check-ollama` - Checks connection to Ollama and available models
+- `/api/generate` - Generates the SOP based on form data
+- `/api/download-docx` - Creates and returns a DOCX file
+- `/api/download-pdf` - Creates and returns a PDF file
+- `/api/download-txt` - Creates and returns a TXT file
 
-## Troubleshooting
+## 🔄 Migration from Flask
 
-### Common Issues
+This project was migrated from a Flask backend to a Next.js application. The migration provides:
 
-1. **Ollama not running**: Make sure Ollama is installed and running on your system.
-2. **Model not found**: Ensure you've pulled the Llama 3.1 8B model by running `ollama pull llama3.1:8b`.
-3. **Generation too slow**: The first generation might be slow as the model loads. Subsequent generations should be faster.
-4. **Out of memory**: If you're running on a system with limited resources, you might encounter memory issues with larger models.
+- Improved performance with client-side rendering
+- Better developer experience with TypeScript
+- Enhanced UI with modern React components
+- Simplified deployment options
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Acknowledgements
+## 🙏 Acknowledgments
 
-- This application uses the [Ollama](https://ollama.ai/) API to interface with the Llama 3.1 model.
-- UI built with [Bootstrap](https://getbootstrap.com/). 
+- [Ollama](https://ollama.ai/) for the local LLM capabilities
+- [Next.js](https://nextjs.org/) for the React framework
+- [Bootstrap](https://getbootstrap.com/) for UI components
+- [Font Awesome](https://fontawesome.com/) for icons
+
+---
+
+Made with ❤️ by Swapnil
